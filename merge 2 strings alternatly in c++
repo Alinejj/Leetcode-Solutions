@@ -1,0 +1,27 @@
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+      //initialize an empty string
+      string str = "";
+        // initialze first and second for the size of word 1 and 2 resp.
+        int first = word1.size();
+        int second = word2.size();
+
+        //create a for loop to loop through both strings and add them into str
+        for (int i = 0; i<first && i < second; i++){
+            str += word1[i];
+            str += word2[i];
+        }
+
+       
+        if(first > second){
+            str += word1.substr(second);
+        }
+
+       
+        else if(second > first){
+            str += word2.substr(first);
+        }
+        return str;
+    }
+};
