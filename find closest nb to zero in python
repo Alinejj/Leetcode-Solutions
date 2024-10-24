@@ -1,0 +1,10 @@
+class Solution:
+    def findClosestNumber(self, nums: List[int]) -> int:
+       result = sys.maxsize
+
+       for num in nums:
+
+         if abs(num) < abs(result) or (abs(num) == abs(result) and num > result):
+             result = num
+
+       return result
