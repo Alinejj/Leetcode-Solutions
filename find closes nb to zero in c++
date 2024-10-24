@@ -9,8 +9,8 @@ public:
 
         x = abs(nums[i]);
 
-        if( x < abs(result) || x == abs(result) && nums[i] < x){
-            result = x;
+        if( x < abs(result) || x == abs(result) && nums[i] > result){
+            result = nums[i];
         }
        }
        return result;
