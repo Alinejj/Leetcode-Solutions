@@ -3,7 +3,7 @@ class Solution {
         int S = s.length();
         int T = t.length();
 
-        if(s == ""){
+        if(s.isEmpty()){
             return true;
         }
 
