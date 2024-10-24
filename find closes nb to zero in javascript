@@ -1,0 +1,20 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findClosestNumber = function(nums) {
+    let result =  Number.MAX_SAFE_INTEGER;
+    let x;
+
+    for(let i = 0; i < nums.length; i++){
+        x = 0;
+        x = Math.abs(nums[i]);
+
+        if( x < Math.abs(result) || x == Math.abs(result) && Math.abs(nums[i]) > x ){
+            result = x;
+        }
+
+
+    }
+    return result;
+};
