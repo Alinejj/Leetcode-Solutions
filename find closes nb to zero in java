@@ -7,8 +7,8 @@ class Solution {
              x = 0;
             x = Math.abs(nums[i]);
 
-            if( x< Math.abs(result) || x == Math.abs(result) && nums[i] > x){
-                result = x;
+            if( x< Math.abs(result) || x == Math.abs(result) && nums[i] > result){
+                result = nums[i];
             }
         }
         return result;
